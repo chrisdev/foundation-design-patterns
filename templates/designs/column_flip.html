@@ -1,0 +1,73 @@
+{% extends "site_base.html" %}
+{% load i18n %}
+{% load ifsetting_tag %}
+
+{% block head_title %}Column Flip{% endblock %}
+
+{% block body %}
+
+<div class="row">
+    <div class="columns six">
+      <h2>Lorem Ipsum</h2>
+      <p>Nulla ornare porta tempor. Quisque viverra semper odio a scelerisque. Donec ac sagittis felis. Curabitur eget mi sapien, quis mattis est. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras tellus justo, euismod a vulputate a, rhoncus quis mauris. Pellentesque egestas libero id dolor mattis venenatis. Sed sodales ligula et nisl tristique posuere sagittis mauris condimentum. Phasellus condimentum augue sit amet odio malesuada eget blandit lectus interdum. Curabitur posuere mi non lacus lacinia non tempus libero venenatis. Morbi sit amet aliquet nibh. Integer fringilla leo at quam congue quis iaculis lacus adipiscing.</p>
+    </div>
+    <div class="columns six">
+      <img src="http://placehold.it/650x400">
+    </div>
+    
+  </div>
+
+  <div class="row">
+    <div class="columns four-flip">
+      <div class="row">
+        <div class="columns four"><img src="http://placehold.it/320x200"></div>
+        <div class="columns four"><img src="http://placehold.it/320x200"></div>
+        <div class="columns four"><img src="http://placehold.it/320x200"></div>
+      </div>
+    </div>
+
+
+    <div class="columns eight-flip hide-on-phones">
+      <div class="row">
+        <div class="columns six">
+          <div class="row">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a. Morbi a adipiscing eros. Sed eros ligula, dapibus feugiat consectetur id, feugiat vel augue. Sed diam nisi, tristique ut tempor non, aliquet quis arcu. Nullam id nulla eu lectus fringilla pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+          </div>
+          <div class="row">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a. Morbi a adipiscing eros. Sed eros ligula, dapibus feugiat consectetur id, feugiat vel augue. Sed diam nisi, tristique ut tempor non, aliquet quis arcu. Nullam id nulla eu lectus fringilla pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+          </div>
+          <div class="row">
+            <h3>Lorem Ipsum</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a. Morbi a adipiscing eros. Sed eros ligula, dapibus feugiat consectetur id, feugiat vel augue. Sed diam nisi, tristique ut tempor non, aliquet quis arcu. Nullam id nulla eu lectus fringilla pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+          </div>
+        </div>
+        <div class="columns six">
+          <div class="row">
+            <div class="columns two"><img src="http://placehold.it/350x350"></div>
+            <div class="columns ten">
+              <h4>Lorem Ipsum</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns two"><img src="http://placehold.it/350x350"></div>
+            <div class="columns ten">
+              <h4>Lorem Ipsum</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="columns two"><img src="http://placehold.it/350x350"></div>
+            <div class="columns ten">
+              <h4>Lorem Ipsum</h4>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+{% endblock %}
