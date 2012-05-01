@@ -38,12 +38,7 @@ urlpatterns = patterns("",
     
     url(r"^mondrian/$", direct_to_template, {
         "template": "designs/mondrian.html",
-    }, name="home"),
-    
-    url(r"^featured_items/$", direct_to_template, {
-        "template": "designs/featured_items.html",
-    }, name="home"),
-    
+    }, name="home"),    
 )
 
 
