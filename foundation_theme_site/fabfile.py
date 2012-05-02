@@ -13,8 +13,8 @@ PROJECT_PATH=split(os.path.abspath(os.path.dirname(__file__)))[1]
 @task
 def production():
     env.hosts=['xibalba.chrisdev.com']
-    env.directory = join('/usr/local/sites/',PROJECT_PATH)
-    env.sites='/usr/local/sites/'
+    env.directory = join('/usr/local/sites','foundation-design-patterns',PROJECT_PATH)
+    env.sites='/usr/local/sites'
     env.project=PROJECT_PATH
     env.virtualenvs='/home/django/virtualenvs/'
     env.python='/home/django/virtualenvs/%s-env/bin/python' % PROJECT_PATH
@@ -28,8 +28,9 @@ def create_virtualenv():
 def clone_project():
     with settings(warn_only=True):
         with cd(env.sites):
-            if run("test -d %s%s" % (env.virtualenvs,env.project)).failed:
-                run('hg clone ssh://hg@bitbucket.org/chrisdev/%s' % env.project)
+            if run("test -d %s" % env.directory).failed:
+                run('git clone git://github.com/chrisdevdeploy/foundation-design-patterns.git')
+        
  
 
 @task
