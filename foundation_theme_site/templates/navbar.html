@@ -1,0 +1,29 @@
+{% load i18n %}
+{% load ifsetting_tag %}
+
+<ul>
+	{% spaceless %}
+		{% if user.is_authenticated %}
+    <li id="tab_profile"><a href="{% url profile_detail user.username %}">{% trans "Profile" %}</a></li>
+    <li id="tab_notices"><a href="{% url notification_notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
+    	{% endif %}
+    <li class="has-dropdown">
+    		<a href="#">Design Patterns</a>
+    		<ul class="dropdown">
+    			<li><a href="/gallery_design/"><span class="glyph general">a</span>Gallery Design</a></li>
+    			<li><a href="/featured_shuffle/"><span class="glyph general">b</span>Featured Shuffle</a></li>
+    			<li><a href="/column_flip/"><span class="glyph general">c</span>Column Flip</a></li>
+    			<li><a href="/mondrian/"><span class="glyph general">d</span>Mondrian</a></li>
+    		</ul>
+    </li> 
+    <li class="has-dropdown">
+    		<a href="#">Create Menus Easily</a>
+    		<ul class="dropdown">
+    			<li><a href="#"><span class="glyph general">e</span>Easily Created</a></li>
+    			<li><a href="#"><span class="glyph general">f</span>Dropdown Menus</a></li>
+    			<li><a href="#"><span class="glyph general">g</span>With Mobile</a></li>
+    			<li><a href="#"><span class="glyph general">h</span>Capabilities</a></li>
+    		</ul>
+    </li>   	
+	{% endspaceless %}
+</ul>
