@@ -44,7 +44,8 @@ def create_virtualenv():
 @task   
 def clone_project():
     """
-    Clone the deployment user's fork of the upstream master
+    Clone the deployment user's fork of the upstream master. 
+    We have a git account specifically for deployment
     """
     with settings(warn_only=True):
         with cd(env.sites):
@@ -55,6 +56,7 @@ def clone_project():
 def add_upstream(): 
     """
     Add the remote upstream
+    We have a git account specifically for deployment
     """
     with settings(warn_only=True):
         with cd(join(env.sites,'foundation-design-patterns')):
@@ -97,7 +99,9 @@ def virtualenv(command):
 @task       
 def update_repo():
     """
-    Update from master - We have a deployment user account with a fork of the master
+    Pull from master
+    We have a git account specifically for deployment
+    with a fork of the master
     """
     with cd(env.directory):
         run('git pull upstream master')
@@ -143,11 +147,15 @@ def build_static():
 @task
 def nginx_reload():
     """
-    Reload the nginx server 
+    Reload the nginx server. 
+    Once the site is up and running you should not have  to use this
     """
     sudo("/etc/init.d/nginx reload")
 @task    
 def gunicorn_reload():
+    """
+    Reload the gunicorn. 
+    """
     with settings(warn_only=True):
         sudo("sudo supervisorctl restart %s" % PROJECT_PATH)
         
@@ -198,7 +206,7 @@ def deploy_supervisor():
 @task
 def deploy_gunicorn(): 
    """
-    Upload and configure the supervisord template 
+    Upload and configure the gunicorn template 
     Store the gunicorn ip_address:port in _deploy.cfg
    """
    destination=join(env.directory,"gunicorn.conf")
@@ -206,7 +214,7 @@ def deploy_gunicorn():
 @task        
 def deploy_conf_files():
     """
-    Upload and configure config files such ass local_settings,nginx.conf,supervisord.conf and gunicorn.py
+    Upload and configure config templates for local_settings,nginx.conf,supervisord.conf and gunicorn.py
     """
     deploy_local_settings()
     deploy_nginx_conf()
