@@ -1,0 +1,11 @@
+.top-bar .attached {
+	max-width: 1000px;
+}
+
+footer.row li {
+	list-style: none;
+}
+
+/*.top-bar .attached > .name {
+	background: none;
+}*/

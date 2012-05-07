@@ -2,33 +2,37 @@
 {% load i18n %}
 {% load ifsetting_tag %}
 
-{% block body_class %}featuredshuffle{% endblock %}
+{% block head_title %}Featured Items{% endblock %}
 
-{% block head_title %}Featured Shuffle{% endblock %}
+{% block body_class %}featureditems{% endblock %}
 
 {% block body %}
 
 <div class="container">
-   <div class="row">
-    <ul class="block-grid shuffle-up">
+  <div class="row">
+    <ul class="block-grid featured-items-up">
       <li>
-        <img class="shuffle-odd hide-on-phones" src="http://placehold.it/350x350">
-        <h3 class="">Lorem Ipsum</h3>
+        <div><img src="http://placehold.it/300x350">
+        <h2>A Title</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a. Morbi a adipiscing eros. Sed eros ligula, dapibus feugiat consectetur id, feugiat vel augue. Sed diam nisi, tristique ut tempor non, aliquet quis arcu. Nullam id nulla eu lectus fringilla pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
       </li>
       <li>
-        <img class="shuffle-even hide-on-phones" src="http://placehold.it/350x350">
-        <h3 class="">Lorem Ipsum</h3>
+        <div><img src="http://placehold.it/300x350">
+        <h2>A Title</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a. Morbi a adipiscing eros. Sed eros ligula, dapibus feugiat consectetur id, feugiat vel augue. Sed diam nisi, tristique ut tempor non, aliquet quis arcu. Nullam id nulla eu lectus fringilla pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
       </li>
       <li>
-        <img class="shuffle-odd hide-on-phones" src="http://placehold.it/350x350">
-        <h3 class="">Lorem Ipsum</h3>
+        <div><img src="http://placehold.it/300x350">
+        <h2>A Title</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a. Morbi a adipiscing eros. Sed eros ligula, dapibus feugiat consectetur id, feugiat vel augue. Sed diam nisi, tristique ut tempor non, aliquet quis arcu. Nullam id nulla eu lectus fringilla pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
+      </li>
+      <li>
+        <div><img src="http://placehold.it/300x350">
+        <h2>A Title</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tristique hendrerit felis, ac condimentum velit tristique a. Morbi a adipiscing eros. Sed eros ligula, dapibus feugiat consectetur id, feugiat vel augue. Sed diam nisi, tristique ut tempor non, aliquet quis arcu. Nullam id nulla eu lectus fringilla pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </p>
       </li>
     </ul>
   </div>
 </div>
-
-
+  
 {% endblock %}
