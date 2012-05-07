@@ -97,7 +97,7 @@ def virtualenv(command):
         
 
 @task       
-def update_repo():
+def pull_upstream():
     """
     Pull from master
     We have a git account specifically for deployment
@@ -187,6 +187,7 @@ def deploy_local_settings():
     destination= join(env.directory,"local_settings.py") 
     
     upload_template('deploy/local_settings_tmpl.py',destination,context=env)
+
            
 @task       
 def deploy_nginx():
@@ -194,7 +195,24 @@ def deploy_nginx():
     Upload and configure the  nginx template 
     Store the nginx settings in _deploy.cfg
     """
-    upload_template('deploy/nginx.conf', join(env.nginx_root,env.project),context=env,use_sudo=True)  
+    upload_template('deploy/nginx.conf', join(env.nginx_root,env.project),context=env,use_sudo=True)
+
+@task
+def enable_site():
+    """
+    Create the symbolic link in the nginx sites-enabled directory to the
+    nginx config for the site
+    """
+    with cd('/etc/nginx/sites-enabled/'):
+        with settings(warn_only=True):
+            sudo('ln -s /etc/nginx/sites-available/%s %s' % (env.project,env.project))
+    sudo('/etc/init.d/nginx configtest')
+      
+@task
+def deploy_enable_nginx():
+    deploy_nginx()
+    enable_site()
+        
 @task        
 def deploy_supervisor():
     """
@@ -203,6 +221,7 @@ def deploy_supervisor():
     """
     destination="/etc/supervisor/conf.d/%s.conf" % env.project
     upload_template('deploy/supervisor.conf',destination, context=env,use_sudo=True) 
+    
 @task
 def deploy_gunicorn(): 
    """
@@ -227,8 +246,8 @@ def update_site():
     Pull and update, build static and reload gunicorn
     """
     maint_mode()
-    pull_update()
+    pull_upstream()
     update_requirements()
-    migrate()
+    migrate_syncdb
     build_static()
     production_mode()
