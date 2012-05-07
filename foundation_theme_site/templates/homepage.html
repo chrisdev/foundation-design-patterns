@@ -8,36 +8,104 @@
 {% block body_class %}home{% endblock %}
 
 {% block banner %}
-    <h1>{% trans "Welcome to Pinax" %}</h1>
-    <p>
-        {% blocktrans %}
-        <b>Pinax</b> is a <a href="http://djangoproject.com/">Django</a>
-        project intended to provide a starting point for websites. By
-        integrating numerous reusable Django apps to take care of the
-        things that many sites have in common, it lets you focus on what
-        makes your site different.
-        {% endblocktrans %}
-    </p>
-    
-    <h2>About Basic Project</h2>
-    <p>
-        {% blocktrans %}
-        This project takes the account_project and adds profiles and notifications.
-        It is a foundation suitable for many sites that have user accounts with
-        profiles.
-        {% endblocktrans %}
-    </p>
-    
-    {% if user.is_authenticated %}
-        {% url what_next as what_next_url %}
-        <p class="what_next">{% blocktrans %}Wondering <a href="{{ what_next_url }}" class="btn primary large">What Next</a>?{% endblocktrans %}</p>
-    {% else %}
-        {% url acct_login as login_url %}
-        {% ifsetting ACCOUNT_OPEN_SIGNUP %}
-            {% url acct_signup as signup_url %}
-            <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn">Log In</a> or <a href="{{ signup_url }}" class="btn primary">Sign Up</a> to try out the site.{% endblocktrans %}</p>
-        {% else %}
-            <p>{% blocktrans %}You can <a href="{{ login_url }}" class="btn primary large">Log In</a> to try out the site.{% endblocktrans %}</p>
-        {% endifsetting %}
-    {% endif %}
+  <h2>
+  {% blocktrans %}
+  Welcome to the Site
+  {% endblocktrans %}
+  </h2>
+
+<p>
+{% blocktrans %}
+This is a demo and sample code site for <a href="https://github.com/chrisdev/pinax-theme-foundation/">pinax-theme-foundation</a>.
+We put up this site up not only as a demonstration of some of the nifty features of <a href="https://github.com/chrisdev/pinax-theme-foundation/">pinax-theme-foundation</a>
+but also to help us collaborate with people who may not be into <a href="http://pinaxproject.org">Pinax</a> or even <a href="http://djangoproject.org">Django</a> 
+but are exited about using <a href="http://foundation.zurb.com">Zurb foundation</a> in their projects. 
+{% endblocktrans %}
+</p>
+<h3>
+ {% blocktrans %}
+What is a Pinax Theme?
+ {% endblocktrans %}
+ </h3>
+<p>
+{% blocktrans %}
+
+A <a href="http://pinaxproject.org">Pinax</a> theme is a reusable app that provides a set of <a href="http://djangoproject.org">Django</a> templates for your project along
+with the the required CSS and Javascript files that provide UX and design infrastructure for your site.
+ <a href="https://github.com/chrisdev/pinax-theme-foundation/">pinax-theme-foundation</a> utilizes <a href="http://foundation.zurb.com">Zurb foundation</a>. <a href="http://foundation.zurb.com">Zurb foundation</a> is a very light weigh framework  that includes a 12 column responsive grid,
+navigation tabs, buttons, typography and so on. <a href="http://github.com/zurb/foundation">Foundation</a> is not as
+feature complete as <a href="http://twitter.github.com/bootstrap/">twitter bootstrap</a> indeed one of design goals of <a href="http://foundation.zurb.com">Foundation</a> 
+{% endblocktrans %}
+</p>
+
+<blockquote cite="http://www.alistapart.com/articles/dive-into-responsive-prototyping-with-foundation">
+<p>
+{% blocktrans %}
+&#8230;to get you 90% of the way there, but the last 10% is where your creativity and design sense come into play
+{% endblocktrans %}
+</p>
+</blockquote>
+
+<p>
+{% blocktrans %}
+You can read more about the ideas behind <a href="http://github.com/zurb/foundation">Foundation</a> well as how to use it for rapid prototyping <a href="http://www.alistapart.com/articles/dive-into-responsive-prototyping-with-foundation">here</a>. 
+{% endblocktrans %}
+</p>
+{% endblock %}
+
+{% block column-1 %}
+<h3>
+{% blocktrans %} 
+Install
+{% endblocktrans %}
+</h3>
+{% blocktrans %} 
+<p>
+Instruction set up Installation instructions for  <a href="https://github.com/chrisdev/pinax-theme-foundation/">pinax-theme-foundation</a>. 
+{% endblocktrans %} 
+{% endblock %}
+
+{% block column-2 %}
+<h3>
+{% blocktrans %} 
+Navigate 
+{% endblocktrans %}
+</h3>
+{% blocktrans %} 
+<p>
+Instructions on how to use the navigation bar that is not part core Foundation but is included in <a href="https://github.com/chrisdev/pinax-theme-foundation/">pinax-theme-foundation</a>.
+</p>
+{% endblocktrans %} 
+{% endblock %}
+
+{% block column-3 %}
+<h3>
+{% blocktrans %} 
+Design
+{% endblocktrans %}
+</h3>
+{% blocktrans %} 
+<p>
+Responsive design patterns originally discussed by <a href="http://designshack.net/articles/css/5-really-useful-responsive-web-design-patterns/">Joshnua Johson</a>  and 
+implement in <a href="http://foundation.zurb.com">Foundation</a> by <a href="http://www.raisedeyebrow.com/blog/2012/04/responsive-design-patterns">Matt Reimer</a>.
+These provide a set of layout interaction patterns for responding to changes in the resolution and display characteristics of the device that is displaying the site namely
+<a href="http://apps.raisedeyebrow.com/Design_Patterns/basic_gallery.php">Basic Gallery</a>, <a href="http://apps.raisedeyebrow.com/Design_Patterns/column_flip.php">Column Flip</a>, 
+<a href="http://apps.raisedeyebrow.com/Design_Patterns/feature_shuffle.php">Feature Shuffle</a>, 
+ <a href="http://apps.raisedeyebrow.com/Design_Patterns/mondrian.php">Mondarian</a>
+ </p>
+
+{% endblocktrans %} 
+{% endblock %}
+
+{% block column-4 %}
+<h3>
+{% blocktrans %} 
+Customize 
+{% endblocktrans %}
+</h3>
+{% blocktrans %} 
+<p>
+how to use stuff like the <a href="https://github.com/zurb/foundation-icons">Foundation Icon Font Sets</a></li>
+</p>
+{% endblocktrans %} 
 {% endblock %}
