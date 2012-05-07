@@ -1,15 +1,28 @@
+/****************************
+    Grid-y junk so you can see
+    where stuff lives
+****************************/
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+.panel.redacted{
+  background: black;
+}
+
+h1.redacted ,h2.redacted,h3.redacted,h4.redacted,h5.redacted { background: black; color: black;}
+
+
+
 /* -----------------------------------------
    Mondrian
 ----------------------------------------- */
 
 /* Fluid Width */
-.mondrian .big.row { 
-	max-width: 90%;
-}
+.mondrian .big.row { max-width: 90%;}
 
-.mondrian .main.eight .panel.redacted { 
-	height: 200px; 
-}
+.mondrian .main.eight .panel.redacted { height: 200px; }
 
 /* Biggest size */
 @media only screen and (min-width: 980px) {   
@@ -20,8 +33,8 @@
   .mondrian .row .main .columns:last-child{ margin-right: 0; float: none; }
   .mondrian .row .main .columns:before, .row .main .columns:before, .row .main .columns:after, .row .main .columns:after { content:""; display:table; }
   .mondrian .row .main .columns:after, .row .main .columns:after { clear: both; }
-}
 
+}
 /* Medium size */
 @media only screen and (max-width: 980px)  and (min-width: 768px) {   
   .mondrian .main.eight .panel.redacted { height: 400px; }
@@ -45,27 +58,17 @@
 @media only screen and (min-width: 980px) {   
   .basicgallery .block-grid.basicgallery-up  { margin-left: -2% }
   .basicgallery .block-grid.basicgallery-up>li { margin-left: 2%; width: 31.3%; margin-bottom: 2%;}
-  .block-grid.basicgallery-up>li {
-  	margin: 20px;
-  }
 }
-
 /* Medium size */
 @media only screen and (max-width: 980px)  and (min-width: 768px) {   
   .basicgallery .block-grid.basicgallery-up { margin-left: -4% }
   .basicgallery .block-grid.basicgallery-up>li { margin-left: 4%; width: 46%; margin-bottom: 4%;}
-  .block-grid.basicgallery-up>li {
-  	margin: 10px;
-  }
-}
 
+}
 /* Small size */
 @media only screen and (max-width: 768px) {   
   .basicgallery .block-grid.basicgallery-up { margin-left: 0; }
   .basicgallery .block-grid.basicgallery-up>li { margin-left: 0%; width: 100%; margin-bottom: 4%;}
-  .block-grid.basicgallery-up>li {
-  	margin: 10px;
-  }
 
 }
 
@@ -79,19 +82,19 @@
   .featureditems .block-grid.featured-items-up { margin-left: -2% }
   .featureditems .block-grid.featured-items-up>li { margin-left: 2%; width: 23%; margin-bottom: 2%;}
 }
-
 /* Medium size */
 @media only screen and (max-width: 980px)  and (min-width: 768px) {   
 
   .featureditems .block-grid.featured-items-up { margin-left: -4% }
   .featureditems .block-grid.featured-items-up>li { margin-left: 4%; width: 46%; margin-bottom: 4%;}
-}
 
+}
 /* Small size */
 @media only screen and (max-width: 768px) {   
 
   .featureditems .block-grid.featured-items-up { margin-left: 0; }
   .featureditems .block-grid.featured-items-up>li { margin-left: 0%; width: 100%; margin-bottom: 4%;}
+
 }
 
 /* -----------------------------------------
@@ -107,13 +110,11 @@
   .row .four-flip .row .four{width: auto !important; float: none; margin-left: 0; margin-right: 0; clear: both;}
   .row .four-flip .row .four{ content:""; display:table; }
 }
-
 /* Medium size */
 @media only screen and (max-width: 980px)  and (min-width: 768px) {   
   .row .four-flip, .row .eight-flip {width: auto !important; float: none; margin-left: 0; margin-right: 0; clear: both;}
   .row .four-flip, .row .eight-flip { content:""; display:table; }
 }
-
 /* Small size */
 @media only screen and (max-width: 768px) {   
 
@@ -132,27 +133,16 @@
   .block-grid.shuffle-up img{ width: 200px; margin: 0 auto; }
   .block-grid.shuffle-up h3{ text-align: center; }
 }
-
 /* Medium size */
 @media only screen and (max-width: 980px)  and (min-width: 768px) {   
   .shuffle-even, .shuffle-odd { width: 100px;}
   .shuffle-even { float: right; margin-left: 3%;} 
   .shuffle-odd  { float: left; margin-right: 3%; }
 }
-
 /* Small size */
 @media only screen and (max-width: 768px) {   
 
 }
 
-.top-bar .attached {
-	max-width: 1000px;
-}
 
-footer.row li {
-	list-style: none;
-}
 
-/*.top-bar .attached > .name {
-	background: none;
-}*/
