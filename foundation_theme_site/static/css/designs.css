@@ -54,12 +54,18 @@
 @media only screen and (max-width: 980px)  and (min-width: 768px) {   
   .basicgallery .block-grid.basicgallery-up { margin-left: -4% }
   .basicgallery .block-grid.basicgallery-up>li { margin-left: 4%; width: 46%; margin-bottom: 4%;}
+  .block-grid.basicgallery-up>li {
+  	margin: 10px;
+  }
 }
 
 /* Small size */
 @media only screen and (max-width: 768px) {   
   .basicgallery .block-grid.basicgallery-up { margin-left: 0; }
   .basicgallery .block-grid.basicgallery-up>li { margin-left: 0%; width: 100%; margin-bottom: 4%;}
+  .block-grid.basicgallery-up>li {
+  	margin: 10px;
+  }
 
 }
 
