@@ -7,6 +7,7 @@
     <li id="tab_profile"><a href="{% url profile_detail user.username %}">{% trans "Profile" %}</a></li>
     <li id="tab_notices"><a href="{% url notification_notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
     	{% endif %}
+    <li><a href="/">Home</a></li>
     <li class="has-dropdown">
     		<a href="#">Design Patterns</a>
     		<ul class="dropdown">
