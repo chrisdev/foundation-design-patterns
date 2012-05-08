@@ -42,8 +42,13 @@ urlpatterns = patterns("",
     
     url(r"^featured_items/$", direct_to_template, {
         "template": "designs/featured_items.html",
-    }, name="home"),    
+    }, name="home"),
+    
+    url(r"^how_to_install/$",direct_to_template, {
+        "template": "how_to_install.html",
+    }, name="how_to_install"),
 )
+
 
 
 if settings.SERVE_MEDIA:

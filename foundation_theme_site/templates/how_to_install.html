@@ -1,0 +1,66 @@
+{% extends "site_base.html" %}
+
+{% block body %}
+<h2>In This Version</h2>
+
+<p>We've added a number of major feature requests & bug fixes for this release including:</p>
+<ul>
+ <li> -- The use Zurb Foundation 2.2.0 which will be the last major release in the 2+ series</li>
+ <li> -- The top navigation bar is now responsive and can support things like drop down lists.</li> 
+ <li> -- Modals dialogs now now work with forms where the link and the from are on different pages.</li>
+</ul>
+
+<h2>Quickstart</h2>
+
+<p>Create a virtual environment for your project and activate it::</p>
+
+<script src="https://gist.github.com/2639952.js"> </script>
+
+<p>Next install Pinax::</p>
+
+	<script src="https://gist.github.com/2639920.js"> </script>
+	
+<p>Once Pinax is installed use <strong>pinax-admin</strong>  to create a project for your site::</p>
+
+	<script src="https://gist.github.com/2639930.js"> </script>
+
+<p>The example above will create a starter django project in the mysite folder based on the Pinax <strong>basic</strong> project. Of ccourse you can use any of the Pinax starter Projects.  The <strong>basic</strong> project provides features such as 
+basic account management as well as user profiles and notifications. The project also comes with a theme - a collection css, javascript files and default templates based on Twitter Bootstrap. </p>
+
+<p>To use the <strong>zurb-foundation</strong> theme in the project, include "pinax-theme-foundation" in requirements/project.txt. Edit the <strong>settings.py</strong> file and 
+comment out the entry for "pinax<em>theme</em>bootstrap" and add "pinax<em>theme</em>foundation" in your INSTALLED APPS::</p>
+
+<script src="https://gist.github.com/2640077.js"> </script>
+
+<p>Inside your project run::</p>
+
+<script src="https://gist.github.com/2640084.js"> </script>
+
+<p>Change the Site name by editing <em>fixture/initial_data.json</em>  you can also use the Admin app for this purpose. </p>
+
+<p>Your "site<em>base.html" should extend "theme</em>base.html" and should provide "footer" and "nav" blocks (the latter should just be a ul of li of a links).</p>
+
+<p>Your pages should have blocks "head<em>title" and "body" and should extend "site</em>base.html".</p>
+
+<p>The <strong>url</strong> name "home" should be defined as the homepage.</p>
+
+<p>Foundation is 100% responsive so that you may want to add the following to the project style sheet <em>static/site_sytles.css</em>
+to handle larger displays::</p>
+
+<script src="https://gist.github.com/2640103.js"> </script>
+
+<h2>Forms</h2>
+
+<p>This theme ships with a basic template tag for rendering forms that match
+the markup expected by foundation</p>
+
+<p>To style forms, add the following to the top of your template ::</p>
+
+<script src="https://gist.github.com/2640149.js"> </script>
+
+<p>and include your form using the following markup: ::</p>
+
+<script src="https://gist.github.com/2640185.js"> </script>
+
+
+{% endblock %}
