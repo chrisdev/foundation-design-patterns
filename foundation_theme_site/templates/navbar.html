@@ -3,11 +3,12 @@
 
 <ul>
 	{% spaceless %}
-		{% if user.is_authenticated %}
+		
+    <li><a href="/">Home</a></li>
+    	{% if user.is_authenticated %}
     <li id="tab_profile"><a href="{% url profile_detail user.username %}">{% trans "Profile" %}</a></li>
     <li id="tab_notices"><a href="{% url notification_notices %}">{% trans "Notices" %}{% if notice_unseen_count %} ({{ notice_unseen_count }}){% endif %}</a></li>
     	{% endif %}
-    <li><a href="/">Home</a></li>
     <li class="has-dropdown">
     		<a href="http://apps.raisedeyebrow.com/Design_Patterns/" target="_blank">Design Patterns</a>
     		<ul class="dropdown">
@@ -21,10 +22,10 @@
     <li class="has-dropdown">
     		<a href="#">Create Menus Easily</a>
     		<ul class="dropdown">
-    			<li><a href="#"><span class="glyph general">e</span>Easily Created</a></li>
-    			<li><a href="#"><span class="glyph general">f</span>Dropdown Menus</a></li>
-    			<li><a href="#"><span class="glyph general">g</span>With Mobile</a></li>
-    			<li><a href="#"><span class="glyph general">h</span>Capabilities</a></li>
+    			<li><a href="{% url how_to_install %}"><span class="glyph general">9</span>Easily Installed</a></li>
+    			<li><a href="{% url menu_howto %}"><span class="glyph general">f</span>Dropdown Menus</a></li>
+    			<li><a href="{% url mobile_in_mind %}"><span class="glyph general">r</span>Mobile-in-Mind Design</a></li>
+    			<li><a href="{% url responsive_design %}"><span class="glyph general">0</span>Responsive Design</a></li>
     		</ul>
     </li>   	
 	{% endspaceless %}

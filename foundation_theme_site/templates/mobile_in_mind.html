@@ -1,0 +1,23 @@
+{% extends "site_base.html" %}
+
+{% block body %}
+<h2>Mobile Visibility</h2>
+
+<p>By using Foundation 2.0 we've included various mobile visibility affordance classes. Want to hide something on phones, or show it only on tablets? Got you covered.</p>
+
+<p>For example, the following text should describe the device you're using:<br/>
+<strong>You are on a desktop machine.</strong></br/>
+That example uses the 'show-on-x' classes seen here:</p>
+
+<script src="https://gist.github.com/2655685.js"> </script>
+
+<p>This example uses the opposite rules, so the following text should describe the device you're using:</br/>
+<strong>You are not on a tablet device.</strong></br/>
+<strong>You are not on a smartphone like an iPhone or Android phone.</strong></p>
+
+<script src="https://gist.github.com/2655690.js"> </script>
+
+<p>Each of these classes have an implied 'only' as in 'show <em>only</em> on tablet' or 'hide <em>only</em> on phones'.</p>
+
+<em> See also <a href="/gallery_design/">Design Patterns</a>  </em>
+{% endblock %}
