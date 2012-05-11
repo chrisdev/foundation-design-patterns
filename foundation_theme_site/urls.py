@@ -42,6 +42,10 @@ urlpatterns = patterns("",
     
     url(r"^featured_items/$", direct_to_template, {
         "template": "designs/featured_items.html",
+    }, name="home"),
+    
+    url(r"^foundation_tricks/$", direct_to_template, {
+        "template": "designs/foundation_tricks.html",
     }, name="home"),    
 )
 

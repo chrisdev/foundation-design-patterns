@@ -1,0 +1,61 @@
+{% extends "site_base.html" %}
+{% load i18n %}
+{% load ifsetting_tag %}
+
+{% block head_title %}Foundation Tricks{% endblock %}
+
+{% block body_class %}Foundation_Tricks{% endblock %}
+
+{% block body %}
+
+<div class="container">
+
+  <div class="row title">
+    <h2>Offsetting Content</h2>
+    <p>Useful when you need columns to have empty spaces before/between them.</p>
+  </div>
+
+  <div class="row title"><h4>Without source ordering (Left - Content - Right):</h4></div>
+
+  <div class="row">
+    <div class="columns two offset-by-one"><img src="http://placehold.it/768x500"></div>
+    <div class="columns four offset-by-one"><img src="http://placehold.it/768x500"></div>
+    <div class="columns two offset-by-two"><img src="http://placehold.it/768x500"></div>
+  </div>
+
+
+  <div class="row title">
+    <h2>Source Ordering</h2>
+    <p>Useful when you need the mobile site to appear in a certain order while maintaining another order on the desktop version. (Look at the source or make this window mobile-sized to see the effect).</p>
+  </div>
+
+  <div class="row title"><h4>Without source ordering (Left - Content - Right):</h4></div>
+
+  <div class="row">
+    <div class="columns three"><img src="http://placehold.it/768x500"></div>
+    <div class="columns six"><img src="http://placehold.it/768x500"></div>
+    <div class="columns three"><img src="http://placehold.it/768x500"></div>
+  </div>
+
+  <div class="row title"><h4>With source ordering (Content - Left - Right):</h4></div>
+
+  <div class="row">
+    <div class="columns six push-three"><img src="http://placehold.it/768x500"></div>
+    <div class="columns three pull-six"><img src="http://placehold.it/768x500"></div>
+    <div class="columns three"><img src="http://placehold.it/768x500"></div>
+  </div>
+
+  <div class="row title">
+    <h2>Mobile Grid</h2>
+    <p>Maybe you don't want your design to stack on mobile. Here's how. Keep in mind that the desktop grid adds to 12 while the mobile grid adds to 4.</p>
+  </div>
+
+  <div class="row">
+    <div class="columns three phone-one"><img src="http://placehold.it/768x500"></div>
+    <div class="columns six phone-two"><img src="http://placehold.it/768x500"></div>
+    <div class="columns three phone-one"><img src="http://placehold.it/768x500"></div>
+  </div>
+
+
+</div>  
+{% endblock %}
