@@ -13,3 +13,12 @@ footer.row li {
 h2 {
 	text-align: center;
 }
+
+footer.row a{
+	color: #545454;
+}
+
+footer.row a:hover{
+	color: #00A5FF;
+	text-decoration: none;
+}
