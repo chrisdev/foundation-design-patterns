@@ -1,0 +1,26 @@
+{% extends "site_base.html" %}
+
+{% block body %}
+
+<h1>Drop-down Menu</h1>
+
+<p>Anyone who has created drop-down menus will be familiar with the large quantities of scripting such menus typically require. 
+But, in this Pinax theme foundation we have done all of the work for you allowing you to focus on the more important part of the design. 
+This allows you to create visually appealing drop-downs that are easy to edit and update, and that work across a multitude of 
+browsers, including Internet Explorer. Better still, for code-wary designers, no JavaScript is required! (Actually, some
+ JavaScript is needed, but we already wrote it for you.)</p>
+
+<h5> Location of the Menu</h5>
+To create a drop-down menu the code must be placed within the top-bar and attached div classes. Out of the box Pinax Theme Foundation 
+comes with one drop-down menu within the top-bar and attached div classes. To add another drop-down menu place the code below within the top-bar and attached div classes.
+<h5>Creating the menu</h5>
+<p>The first step is to create the menu structure itself. This is done by using an unordered list as the main menu bar, and each drop-down-menu appearing 
+as a list within its parent list item. Sound complicated? It’s actually very straightforward: </p>
+
+<script src="https://gist.github.com/2654124.js"> </script>
+
+The above code shows the drop-down menu code for "design patterns". It should be noted that the design pattern was added 
+as a list item that contained a list of links.  All that is required to define a dropdown menu in the topbar is to make
+a list item tag with css class "has-dropdown" and a unordered list tag with css class "dropdown" 
+
+{% endblock %}
