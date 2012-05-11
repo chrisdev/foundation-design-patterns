@@ -44,8 +44,8 @@ urlpatterns = patterns("",
         "template": "designs/featured_items.html",
     }, name="home"),
     
-    url(r"^foundation_tricks/$", direct_to_template, {
-        "template": "designs/foundation_tricks.html",
+    url(r"^foundation_grid/$", direct_to_template, {
+        "template": "designs/foundation_grid.html",
     }, name="home"),
     
     url(r"^how_to_install/$",direct_to_template, {
