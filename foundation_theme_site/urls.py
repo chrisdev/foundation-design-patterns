@@ -52,8 +52,8 @@ urlpatterns = patterns("",
         "template": "how_to_install.html",
     }, name="how_to_install"),
     
-    url(r"^menu_howto/$",direct_to_template, {
-        "template": "menu_howto.html",
+    url(r"^menu_how_to/$",direct_to_template, {
+        "template": "menu_how_to.html",
     }, name="menu_howto"),
     
     url(r"^mobile_in_mind/$",direct_to_template, {
